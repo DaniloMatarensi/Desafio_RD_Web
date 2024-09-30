@@ -88,6 +88,7 @@ E busco o admin cadastrado
 
 
 Entao excluo o user e realizo logout
+    Sleep    3s
     Click Element    ${Btn_Trash}
     Wait Until Element Is Visible    ${Btn_Yes_Delete} 
     Click Element    ${Btn_Yes_Delete} 
