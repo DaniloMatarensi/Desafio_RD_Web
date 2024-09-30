@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-09-29T22:17:44.652001" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="c:\Users\User\OneDrive\Área de Trabalho\Desafio_RD_Web\Test\login.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Cadastrar adm, buscar, apagar adm e realizar logout" line="6">
+<kw name="Dado que acesso o site" owner="login_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:45.604265" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-29T22:17:45.604265" elapsed="4.977430"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-29T22:17:50.581695" elapsed="0.041419"/>
+</kw>
+<status status="PASS" start="2024-09-29T22:17:45.602265" elapsed="5.020849"/>
+</kw>
+<kw name="Quando realizo o login" owner="login_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Campo_Login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-29T22:17:50.624115" elapsed="0.458740"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Variável 'Campo_Login': ${Campo_Login}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.082855" elapsed="0.001011"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:51.084865" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>${Campo_Login}</arg>
+<arg>${Input_Login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.083866" elapsed="0.112576"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Campo_Senha}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.196442" elapsed="0.027076"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Variável 'Campo_Login': ${Campo_Senha}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.223518" elapsed="0.001001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:51.224519" level="INFO">Typing text 'admin123' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>${Campo_Senha}</arg>
+<arg>${Input_Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.224519" elapsed="0.117332"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:51.341851" level="INFO">Clicking element '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>${Btn_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:51.341851" elapsed="1.250143"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Btn_Upgrade}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-29T22:17:52.591994" elapsed="0.485395"/>
+</kw>
+<status status="PASS" start="2024-09-29T22:17:50.623114" elapsed="2.455374"/>
+</kw>
+<kw name="E cadastro um novo user admin" owner="login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:53.079497" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a'.</msg>
+<arg>${Btn_Admin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:53.079497" elapsed="1.264807"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Btn_Add}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-29T22:17:54.344304" elapsed="0.505951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:54.850255" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button'.</msg>
+<arg>${Btn_Add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:54.850255" elapsed="0.530570"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Combo_User_Role}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-29T22:17:55.380825" elapsed="0.454453"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:17:55.836319" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i'.</msg>
+<arg>${Combo_User_Role}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T22:17:55.836319" elapsed="0.067851"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-29T22:18:01.045558" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-29T22:18:01.045558" level="FAIL">Element '(//div[contains(.,'Admin')])[18]' not visible after 5 seconds.</msg>
+<arg>${Option_Admin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-29T22:17:55.904170" elapsed="5.151321">Element '(//div[contains(.,'Admin')])[18]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Option_Admin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.056489" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Campo_Name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.056489" elapsed="0.001000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Campo_Name}</arg>
+<arg>Test User 485128</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.057489" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.057489" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${Campo_Name}</arg>
+<arg>DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.058489" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${Campo_Name}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.058489" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Combo_Status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.058489" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Status_Enable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.059490" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Status_Enable}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.059490" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Campo_Username}</arg>
+<arg>DanTestesRD</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.059490" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Campo_Password}</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.060850" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Campo_Conf_Pass}</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.060850" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Btn_Save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-29T22:18:01.060850" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-29T22:17:53.078488" elapsed="7.982362">Element '(//div[contains(.,'Admin')])[18]' not visible after 5 seconds.</status>
+</kw>
+<kw name="E valido que foi cadastrado com sucesso" owner="login_resources">
+<status status="NOT RUN" start="2024-09-29T22:18:01.061858" elapsed="0.000000"/>
+</kw>
+<kw name="E busco o admin cadastrado" owner="login_resources">
+<status status="NOT RUN" start="2024-09-29T22:18:01.061858" elapsed="0.000000"/>
+</kw>
+<kw name="Entao excluo o user e realizo logout" owner="login_resources">
+<status status="NOT RUN" start="2024-09-29T22:18:01.063366" elapsed="0.000000"/>
+</kw>
+<doc>O teste tem objetivo de realizar login</doc>
+<tag>Validar_login</tag>
+<status status="FAIL" start="2024-09-29T22:17:45.601268" elapsed="15.463108">Element '(//div[contains(.,'Admin')])[18]' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" start="2024-09-29T22:17:44.659085" elapsed="16.406291"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Validar_login</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
